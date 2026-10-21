@@ -9,6 +9,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+app.use(express.static("public"));
 
 // Temporary storage for registered users
 const users = [];

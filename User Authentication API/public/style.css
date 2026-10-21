@@ -1,0 +1,247 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #0b1020;
+    --card: #121a2d;
+    --border: #26334b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --accent: #8b5cf6;
+    --accent-light: #a78bfa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(ellipse at top left, #25204f 0%, transparent 45%),
+        radial-gradient(ellipse at bottom right, #172d4d 0%, transparent 45%),
+        var(--bg);
+}
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 36px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: rgba(18, 26, 45, 0.94);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.brand h1 {
+    font-size: 27px;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    margin: 12px 0 28px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.tabs {
+    display: flex;
+    padding: 5px;
+    margin-bottom: 26px;
+    border-radius: 12px;
+    background: #0b1222;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tab.active {
+    background: #27314a;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    outline: none;
+    background: #0b1222;
+    color: var(--text);
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #64748b;
+}
+
+.form-group input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    transform: none;
+}
+
+.message {
+    min-height: 20px;
+    margin: 0 0 14px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.message.success {
+    color: #4ade80;
+}
+
+.message.error {
+    color: #f87171;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.dashboard {
+    text-align: center;
+}
+
+.success-icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    margin: 8px auto 18px;
+    border-radius: 50%;
+    background: rgba(74, 222, 128, 0.12);
+    color: #4ade80;
+    font-size: 30px;
+}
+
+.dashboard h2 {
+    margin-bottom: 9px;
+    font-size: 25px;
+}
+
+.dashboard > p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.user-info {
+    margin: 24px 0;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-align: left;
+}
+
+.user-info p {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 0;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.user-info strong {
+    color: var(--muted);
+}
+
+.security-note {
+    margin-top: 24px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+footer {
+    margin-top: 22px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 26px 20px;
+        border-radius: 18px;
+    }
+}

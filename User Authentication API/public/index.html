@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuthFlow | User Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="auth-container">
+        <section class="auth-card">
+            <div class="brand">
+                <div class="brand-icon">A</div>
+                <h1>AuthFlow</h1>
+            </div>
+
+            <p class="subtitle">Secure access to your account</p>
+
+            <div class="tabs">
+                <button id="loginTab" class="tab active" type="button">
+                    Login
+                </button>
+                <button id="signupTab" class="tab" type="button">
+                    Sign Up
+                </button>
+            </div>
+
+            <form id="authForm">
+                <div id="nameGroup" class="form-group hidden">
+                    <label for="name">Full name</label>
+                    <input id="name" type="text"
+                           placeholder="Enter your name" autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input id="email" type="email"
+                           placeholder="you@example.com"
+                           autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" type="password"
+                           placeholder="Minimum 8 characters"
+                           minlength="8" autocomplete="current-password"
+                           required>
+                </div>
+
+                <p id="message" class="message" role="status"></p>
+
+                <button id="submitBtn" class="submit-btn" type="submit">
+                    Login to Account
+                </button>
+            </form>
+
+            <section id="dashboard" class="dashboard hidden">
+                <div class="success-icon">✓</div>
+                <h2>Welcome!</h2>
+                <p>You are successfully authenticated.</p>
+                <div class="user-info">
+                    <p><strong>Name</strong><span id="userName"></span></p>
+                    <p><strong>Email</strong><span id="userEmail"></span></p>
+                </div>
+                <button id="logoutBtn" class="submit-btn" type="button">
+                    Logout
+                </button>
+            </section>
+
+            <p class="security-note">Protected with password hashing &amp; JWT</p>
+        </section>
+
+        <footer>AuthFlow · User Authentication API</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
